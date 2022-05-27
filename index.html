@@ -1,0 +1,156 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="caleb rufus, ically, forex trader, phone engineer"/>
+  <meta name="author" content="rufus caleb" />
+  
+  <meta name="description" content="rufus caleb, ically, forex trader, proffesional phone engineer" />
+  <link rel="stylesheet" href="css/index.css">
+  
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  
+  
+  
+  <link rel="stylesheet" href="bootstrap 5/css/bootstrap.min.css" type="text/css" media="all" />
+  
+  <link rel="stylesheet" href="font awesome/all.css" type="text/css" media="all" />
+  <script src="Giniparser/dist/gini.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/index.js"></script>
+  
+  
+  
+  <title>Rufus Caleb</title>
+</head>
+<body onload="sa();">
+	<img src="folio.png" id="bg"/>
+	
+	<div class="container-fluid bg-dark text-right text-white pt-5 pb-5" id="about">
+	  <main style="display: none"><h1 style="font-size:14px;display:none">rufus caleb
+	  </h1>
+	  Rufus Caleb, rufus caleb, rufus, caleb, forex trader, forex, forex, forex, trader, rufus, ically, ically
+	  </main>
+	  <main>
+	    <i>
+	      I am Rufus Caleb Favour<br/>
+	     from Enugu State, Nigeria<br/>
+	      a forex trader<br/>and a certified gadget and <br/>phones repair engineer<br/>
+	      with 7+ years experience<br/>
+	    </i>
+	  </main>
+	  <br/>
+	  <a href="https://wa.me/+2348145962800">
+	    <button class="btn btn-primary text-center text-white pt-2 pb-2 pl-2 pr-2">Contact Me</button>
+	  </a>
+	  <a id="to" onclick="view();">
+	    <button class="btn btn-primary text-white text-center pl-2 pr-2">What They Say</button>
+	  </a>
+	  <br/>
+	  <br/>
+	  <a href="review.php" id="to"><button class="btn btn-primary text-white text-center"><i class="fas fa-plus">&ThickSpace;</i>Add Review</button></a>
+	  <br/>
+	  <br/>
+	  <a href="https://wa.me/+2348145962800" id="social"><i class="fab fa-whatsapp" style="color:mediumseagreen"></i></a>
+	  <a href="tel:+2348145962800" id="social"><i class="fas fa-phone" style="color:white"></i></a>
+	  <a id="social" href="mailto:https://ccrufus7@gmail.com"><i class="fas fa-envelope" style="color:crimson"></i></a>
+	</div>
+	
+	<div class="container-fluid text-center pt-2 pb-2" id="gallery">
+	  <strong id="gl">
+	    My Clients
+	  </strong>
+	 <br/>
+	 <br/>
+	  <div class="row" id="row">
+	    
+	  
+	   
+	 </div>
+	    <br/>
+	     <button class="btn btn-primary text-white text-center" id="back" onclick="vie();"><i class="fas fa-arrow-left"></i>&ThickSpace;RETURN</button>
+	   <br/>
+	   <br/>
+	   
+	    
+	    
+	    
+	  
+	</div>
+	
+	
+	<div class="container-fluid bg-dark text-primary text-center" id="foot">
+	  
+	  <strong>Theme By &ThickSpace;</strong><a href="https://uzodimmajoseph.netlify.app">Uzzra Tech</a>
+	  
+	</div>
+	
+	
+	<img src="logos.png" id="logo"/>
+
+<script type="text/javascript" charset="utf-8">
+  
+  
+function sa(){
+   var target=document.getElementById("row")
+  
+  new parseGINIFile("rev/reviews.gini").then(res=>{
+    
+    const val=JSON.parse(res)
+    const key=Object.keys(val)
+    for(var i=0;i<key.length;i++){
+      
+    const attr=key[i]
+     //create elems
+     target.insertAdjacentHTML('beforeend', `
+     <div class='col-md-1 bg-dark text-white' style='word-break:break-all'>
+     <div>"${val[attr].reviewText}"
+    </div>
+     <br/>
+    <h5>${val[attr].reviewer}</h5><br/>
+    <i>${val[attr].about}</i>
+    
+     
+     </div>
+     
+     '
+     
+     `)
+    /*const pel=document.createElement("div")
+      pel.className="col-md-1 bg-dark text-center text-white"; 
+      
+      const descr=document.createElement("p")
+      pel.innerHTML=`${val[attr].reviewText}`;
+      
+       const bt=document.createElement("h5")
+  bt.innerHTML=val[attr].reviewer
+    const btn=document.createElement("i")
+    btn.innerHTML=val[attr].about
+     
+      
+      
+      pel.appendChild(descr)
+     pel.appendChild(bt)
+      pel.appendChild(btn)
+      target.appendChild(pel)
+     */
+    }
+    
+    
+  })
+  
+}
+ 
+  
+</script>
+</body>
+</html>
