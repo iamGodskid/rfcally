@@ -114,7 +114,7 @@
 function sa(){
    var target=document.getElementById("row")
   
-  new parseGINIFile("https://rfcally.42web.io/rev/reviews.gini").then(res=>{
+  new parseGINIFile("https://rfcally.42web.io/rev/reviews.txt").then(res=>{
     
     const val=JSON.parse(res)
     const key=Object.keys(val)
